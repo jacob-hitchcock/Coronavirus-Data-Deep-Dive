@@ -1,0 +1,49 @@
+---
+title: "Midpoint Deliverable"
+author: "Jacob Hitchcock, Bill Tang, & Mihir Joshi"
+date: "11/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+source("scripts/chart_one.r")
+source("scripts/chart_two.R")
+source("scripts/chart_three.R")
+source("scripts/summary.R")
+source("scripts/summary_table.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary
+With the explosion of the COVID-19 pandemic, it is vital to understand the severity of this outbreak and it's effect on a variety of aspects. With it's impacts being felt worldwide and roughly 54 million cases confirmed, an abundance of data surrounding the Coronavirus has been made available. We have decided to take a deep dive into the the data and explore things such as total cases and deaths, which areas a being impacted the most, and who is performing the best in limiting cases. We are using datasets from John Hopkins University, The COVID Tracking Project, and the NY Times, all of which summarize different pieces of data surrounding COVID-19.
+
+In total, roughly `r toString(ConfirmedUS)` number of cases have been confirmed in the United States alone. Numbers continue to rise and this figure shows the large impact that this pandemic has had. In comparison, a total of `r toString(confirmvan)` case had been confirmed in the country of Vanuatu. While the difference in population is quite stark, the low number can also be attributed to differing policies and enforcement. Given the large number of cases, one might think that this outbreak has taken place over a long period of time like years. In reality, the noted number of cases are recorded over just `r days` days. On Average, the United States is reporting `r toString(USMean)` new cases every day. This is almost the same number of students that were enrolled at the UW in 2016. COVID-19 had impacted so many and taken numerous lives. In Brazil, a peak of `r toString(maxBraz)` lives were lost in the span of 24 hours. This shows that, while some may deny the severity of this pandemic, people are losing loved ones every day and intervention is necessary.
+
+## Summary Table
+```{r death_table, echo = FALSE, warning = FALSE}
+library(knitr)
+kable(final_table, caption = "Worldwide COVID-19 Deaths Per Month (As of 2020-11-15)")
+```
+
+Examining this table, you can see how the number of cases confirmed has risen each month. This exponential growth is __daunting__ and with the data being accurate through November 15th, we are on track to continue this rise. This table shows the dramatic way the Coronavirus has spread within the United States.
+
+## COVID-19 in our Colleges
+```{r final_coll_chart, echo = FALSE, warning = FALSE}
+plot(final_chart)
+```
+
+Many of the stories that are being painted of the pandemic is that younger people are immune and shouldn't worry. This **dangerous** narrative spreads misinformation and can lead to greater spread of the sickness. This table shows the numerous cases being reported in US colleges. You can see that the majority of the top colleges are located in the South and Midwest.
+
+## Countries with the Most Cases
+```{r final_country_chart, echo = FALSE, warning = FALSE}
+plot(countries_plot)
+```
+
+As you can see in this plot, the US is **dramatically** in the lead of the country with the most confirmed cases. Brazil lands in second, although the margin between the US and Brazil is quite wide. Something to take away from this is the fact that China, where COVID-19 is thought to have originated from, is not in the countries.
+
+## How the Pandemic Has Changed Over Time
+```{r final_deaths_chart, echo = FALSE, warning = FALSE}
+plot(third_plot)
+```
+
+With the onset of the pandemic, countries had to react quickly to implement measures and reduce the spread. Examining this chart, you can see the **effectiveness** of these measures in preventing the spread, and in turn deaths. For example, the UK had a mini spike where they were reporting over 1000 deaths per day before reducing this to almost none. Unfortunately, now you can see the number of deaths reported per day are rising in the recent days. 
