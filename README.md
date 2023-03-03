@@ -1,4 +1,13 @@
-# Final Project Brainstorm
+# Coronavirus Data Deep Dive
+This was a project that a team and I constructed in the Autumn of 2020. Being that it was the peak of the COVID-19 pandemic and I was beginning college from home, we strived to explore the vast amount of new data being collected. 
+
+We initially constructed a midpoint deliverable, which is constructed in index.html. For the final delivery, we performed data analysis and constructed a report using R.
+
+The final deployed version can be found @ https://jacob-hitchcock.shinyapps.io/final-project-info/
+
+
+## Final Project Brainstorm
+Below you will find our original rationale for pursuing this topic.
 ### Domain of Interest: COVID-19
 
 __Why are we interested in this field?__
